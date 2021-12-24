@@ -48,8 +48,8 @@ public class BurpExtender implements IBurpExtender, ITab, IHttpListener,IExtensi
 	private String defaultHostRegex = "127\\.0\\.0\\.1";
 	private String defaultInfoRegexs = "phone:([01][\\d]{2}[ -]?[\\d]{4}[ -]?[\\d]{4})"+"\n"
 			+"email:[a-zA-Z0-9][-a-zA-Z0-9_\\.]+@(?:[a-zA-Z0-9][-a-zA-Z0-9]+\\.)+[a-z]+" + "\n"
-			+ "ipurl:https?://(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/?" + "\n"
-			+ "normalurl:https?://[a-z0-9\\.]+(?:/?[-A-Za-z0-9_%]*)+";
+			+ "ipurl:https?://[0-9\\.]+(?::[0-9]+)?/?[a-zA-Z0-9/_%-]*" + "\n"
+			+ "domainurl:https?://(?:[a-zA-Z0-9]+\\.)+[a-zA-Z]+(?::[0-9]+)?/?[a-zA-Z0-9/_%-]*";
 	private String defaultTools = "proxy spider";
 	private String defaultMimeTypes = "html script text json";
 	private String defaultLogDir;
